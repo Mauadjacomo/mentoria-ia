@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Mentoria IA – Ganhe Dinheiro com Inteligência Artificial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0b0b0f;
+      color: white;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #00ffe7, #0066ff);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .box {
+      background: #111318;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 0 25px rgba(0,255,231,0.1);
+    }
+
+    .cta {
+      background: #00ffe7;
+      color: black;
+      padding: 18px;
+      text-align: center;
+      border-radius: 12px;
+      font-size: 1.2rem;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .cta:hover {
+      background: white;
+      transform: scale(1.04);
+    }
+
+    .login, .members {
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      background: #00ffe7;
+      border: none;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .live-box {
+      background: #0b0d12;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 1px solid #00ffe7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Mentoria Ganhe Dinheiro com Inteligência Artificial</h1>
+  <p>Saia do zero e crie fontes reais de renda com IA</p>
+</header>
+
+<section id="venda">
+  <div class="box">
+    <h2>O QUE VOCÊ VAI APRENDER</h2>
+    <p>✅ Criar negócios digitais com IA</p>
+    <p>✅ Automações que geram renda</p>
+    <p>✅ Como vender serviços usando inteligência artificial</p>
+    <p>✅ Estratégias exclusivas de lucratividade</p>
+  </div>
+
+  <div class="box">
+    <h2>OFERTA ESPECIAL</h2>
+    <p style="text-decoration: line-through;">De R$ 489,99</p>
+    <h1 style="color:#00ffe7;">Por apenas R$ 137,99</h1>
+    <div class="cta" onclick="irParaLogin()">QUERO ENTRAR AGORA</div>
+  </div>
+</section>
+
+<section class="login" id="login">
+  <div class="box">
+    <h2>ACESSO DOS ALUNOS</h2>
+    <input type="email" id="email" placeholder="Seu e-mail">
+    <input type="password" id="senha" placeholder="Sua senha">
+    <button onclick="login()">Entrar</button>
+  </div>
+</section>
+
+<section class="members" id="members">
+  <div class="box">
+    <h2>ÁREA DE MEMBROS</h2>
+    <p>Bem-vindo à Mentoria IA 🚀</p>
+
+    <div class="live-box">
+      <h3>📺 AULA AO VIVO</h3>
+      <p>Próxima live: Quinta-feira às 20h</p>
+      <a href="https://meet.google.com/" target="_blank">
+        <button>ENTRAR NA LIVE</button>
+      </a>
+    </div>
+
+    <div class="live-box">
+      <h3>📚 CONTEÚDO GRAVADO</h3>
+      <p>Módulo 1 – Fundamentos da IA</p>
+      <p>Módulo 2 – Como ganhar dinheiro com IA</p>
+      <p>Módulo 3 – Automatizando lucros</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  function irParaLogin() {
+    document.getElementById("venda").style.display = "none";
+    document.getElementById("login").style.display = "block";
+  }
+
+  function login() {
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    if(email && senha) {
+      document.getElementById("login").style.display = "none";
+      document.getElementById("members").style.display = "block";
+    } else {
+      alert("Preencha os dados corretamente!");
+    }
+  }
+</script>
+
+</body>
+</html>
